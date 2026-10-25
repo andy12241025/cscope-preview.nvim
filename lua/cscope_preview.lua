@@ -102,7 +102,7 @@ local function open(results)
 
   map_keys = function()
     local o = { buffer = buf, nowait = true, silent = true }
-    vim.keymap.set("n", "q", close_top, o)
+    vim.keymap.set("n", "q", M.close_all, o)
     vim.keymap.set("n", "<Esc>", close_top, o)
     vim.keymap.set("n", "<C-n>", function() goto_idx(idx + 1) end, o)
     vim.keymap.set("n", "<C-p>", function() goto_idx(idx - 1) end, o)

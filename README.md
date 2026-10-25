@@ -24,7 +24,6 @@ uses the very same cscope database and needs no `compile_commands.json`.
     { "<leader>d", function() require("cscope_preview").peek("definition") end, desc = "Cscope preview definition" },
     { "<leader>s", function() require("cscope_preview").peek("references") end, desc = "Cscope preview references" },
     { "<leader>r", function() require("cscope_preview").peek("callers") end, desc = "Cscope preview callers" },
-    { "gP", function() require("cscope_preview").close_all() end, desc = "Close cscope previews" },
   },
 },
 ```
@@ -41,7 +40,8 @@ Inside a preview (an editable float):
 | --- | --- |
 | `<C-n>` / `<C-p>` | next / previous match |
 | `<CR>` | close previews and jump to this location |
-| `q` / `<Esc>` | close this preview |
+| `q` | close all previews |
+| `<Esc>` | close this preview only |
 
 ## Notes
 
